@@ -1,0 +1,240 @@
+.leaderboard-page {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    animation: fadeIn 0.4s ease;
+}
+
+/* HERO */
+.lb-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 22px;
+    border-radius: 22px;
+    background: radial-gradient(circle at top left, #eef2ff, #ffffff 60%);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lb-hero h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.lb-hero p {
+    color: #444;
+    font-size: 14px;
+}
+
+.lb-actions {
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.lb-select,
+.lb-search {
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    outline: none;
+    background: white;
+    font-size: 13px;
+}
+
+.lb-search {
+    width: 210px;
+}
+
+.lb-glow {
+    position: absolute;
+    inset: -40%;
+    background: conic-gradient(from 180deg, rgba(99, 102, 241, 0.25), rgba(34, 197, 94, 0.2), rgba(245, 158, 11, 0.18));
+    filter: blur(70px);
+    animation: glowSpin 8s linear infinite;
+    opacity: 0.75;
+}
+
+/* PODIUM */
+.lb-podium {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    gap: 16px;
+}
+
+.podium-card {
+    border-radius: 22px;
+    padding: 16px;
+    box-shadow: var(--shadow-soft);
+    background: white;
+    text-align: center;
+    transition: transform 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.podium-card:hover {
+    transform: translateY(-5px);
+}
+
+.podium-card.gold {
+    background: linear-gradient(135deg, #fff7ed, #ffffff);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.podium-card.silver {
+    background: linear-gradient(135deg, #f3f4f6, #ffffff);
+    border: 1px solid rgba(107, 114, 128, 0.22);
+}
+
+.podium-card.bronze {
+    background: linear-gradient(135deg, #ffedd5, #ffffff);
+    border: 1px solid rgba(180, 83, 9, 0.22);
+}
+
+.podium-tag {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    background: rgba(0, 0, 0, 0.06);
+    margin-bottom: 12px;
+}
+
+.podium-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 10px;
+    font-weight: 900;
+    color: white;
+    background: linear-gradient(135deg, #4f46e5, #22c55e);
+}
+
+.podium-card h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.podium-card p {
+    font-size: 12px;
+    color: #666;
+}
+
+.podium-credits {
+    margin-top: 12px;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 14px;
+    font-weight: 800;
+    font-size: 12px;
+    background: rgba(79, 70, 229, 0.08);
+    color: #4338ca;
+}
+
+/* TABLE CARD */
+.lb-card {
+    background: white;
+    border-radius: 22px;
+    box-shadow: var(--shadow-soft);
+    padding: 18px;
+}
+
+.lb-card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.lb-tag {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    background: #eef2ff;
+    color: #4338ca;
+}
+
+.lb-table {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ROWS */
+.lb-row {
+    display: grid;
+    grid-template-columns: 0.4fr 1.3fr 0.8fr 0.5fr 0.7fr 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 12px;
+    border-radius: 16px;
+    background: #f9fafb;
+    transition: transform 0.2s ease;
+}
+
+.lb-row:hover {
+    transform: translateY(-2px);
+}
+
+.lb-row.lb-head {
+    background: #eef2ff;
+    font-weight: 800;
+}
+
+.lb-row.me {
+    background: linear-gradient(90deg, rgba(34, 197, 94, 0.14), rgba(255, 255, 255, 0.6));
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.rank {
+    font-weight: 900;
+}
+
+.me-tag {
+    margin-left: 8px;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: rgba(34, 197, 94, 0.18);
+    color: #166534;
+}
+
+.lb-muted {
+    color: #777;
+    font-size: 13px;
+}
+
+/* BADGE ICONS */
+.bicon {
+    display: inline-grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 10px;
+    font-weight: 900;
+    margin-right: 6px;
+    font-size: 12px;
+    color: white;
+}
+
+.bicon.gold {
+    background: linear-gradient(135deg, #f59e0b, #ea580c);
+}
+
+.bicon.silver {
+    background: linear-gradient(135deg, #9ca3af, #6b7280);
+}
+
+.bicon.bronze {
+    background: linear-gradient(135deg, #cd7f32, #b45309);
+}
+
+.bicon.starter {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+}

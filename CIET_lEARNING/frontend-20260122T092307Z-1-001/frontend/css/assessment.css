@@ -1,0 +1,112 @@
+/* =========================
+   ASSESSMENT PAGE LAYOUT
+========================= */
+
+.assessment {
+    max-width: 900px;
+    margin: auto;
+    animation: fadeIn 0.6s ease;
+}
+
+.assessment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.assessment-header h2 {
+    font-size: 22px;
+}
+
+.timer {
+    background: #111827;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* =========================
+   QUESTION CARD
+========================= */
+
+.question-card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+}
+
+.question-card h3 {
+    margin-bottom: 15px;
+}
+
+.problem {
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* =========================
+   MCQ OPTIONS
+========================= */
+
+.mcq-option {
+    display: block;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.mcq-option:hover {
+    background: #eef2ff;
+}
+
+/* =========================
+   CODE AREA
+========================= */
+
+textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-family: monospace;
+    margin-top: 15px;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.submit-btn {
+    margin-top: 25px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    background: var(--primary);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    float: right;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

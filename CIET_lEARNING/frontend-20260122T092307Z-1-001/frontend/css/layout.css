@@ -1,0 +1,45 @@
+#app {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #4f46e5, #6366f1);
+    color: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .brand {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.sidebar button {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.sidebar button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(6px);
+}
+
+/* MAIN CONTENT */
+.main {
+    flex: 1;
+    padding: 35px;
+    overflow-y: auto;
+}

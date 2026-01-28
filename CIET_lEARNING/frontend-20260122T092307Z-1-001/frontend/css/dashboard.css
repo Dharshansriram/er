@@ -1,0 +1,357 @@
+.dash-page {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    animation: fadeIn 0.4s ease;
+}
+
+/* HERO */
+.dash-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    box-shadow: var(--shadow-soft);
+    padding: 22px;
+    background: radial-gradient(circle at top left, #eef2ff, #ffffff 60%);
+    display: grid;
+    grid-template-columns: 2fr 1.2fr;
+    gap: 18px;
+}
+
+.dash-hero-left h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.name-glow {
+    color: #4f46e5;
+}
+
+.dash-hero-left p {
+    color: #444;
+    font-size: 14px;
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+.dash-hero-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.dash-btn-primary {
+    border: none;
+    padding: 10px 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+    color: white;
+    box-shadow: 0 14px 28px rgba(79, 70, 229, 0.25);
+    transition: transform 0.25s ease;
+    font-size: 14px;
+}
+
+.dash-btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.dash-btn-secondary {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 10px 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    background: white;
+    transition: transform 0.25s ease;
+    font-size: 14px;
+}
+
+.dash-btn-secondary:hover {
+    transform: translateY(-2px);
+}
+
+.dash-btn-primary.small,
+.dash-btn-secondary.small {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+/* Quote */
+.dash-quote {
+    margin-top: 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    background: rgba(79, 70, 229, 0.08);
+    padding: 12px 14px;
+    border-radius: 16px;
+    font-size: 13px;
+    color: #333;
+}
+
+.dash-quote p {
+    margin: 0;
+}
+
+.dash-hero-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    z-index: 2;
+}
+
+.hero-mini-card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: var(--shadow-soft);
+    padding: 14px;
+    text-align: center;
+    transition: transform 0.25s ease;
+}
+
+.hero-mini-card:hover {
+    transform: translateY(-3px);
+}
+
+.hero-mini-card h3 {
+    font-size: 18px;
+}
+
+.hero-mini-card p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Glow background */
+.dash-hero-glow {
+    position: absolute;
+    inset: -40%;
+    background: conic-gradient(from 180deg, rgba(99, 102, 241, 0.25), rgba(34, 197, 94, 0.2), rgba(245, 158, 11, 0.15));
+    filter: blur(70px);
+    animation: glowSpin 8s linear infinite;
+    opacity: 0.7;
+}
+
+/* Grid */
+.dash-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 18px;
+}
+
+.dash-col {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Cards */
+.dash-card {
+    background: white;
+    border-radius: 22px;
+    box-shadow: var(--shadow-soft);
+    padding: 18px;
+    transition: transform 0.25s ease;
+}
+
+.dash-card:hover {
+    transform: translateY(-4px);
+}
+
+.dash-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.dash-tag {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    background: #eef2ff;
+    color: #4338ca;
+}
+
+.dash-muted {
+    color: #777;
+    font-size: 13px;
+}
+
+/* Bars */
+.dash-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.dash-bar-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.dash-bar {
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.dash-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 999px;
+    transition: width 0.7s ease;
+}
+
+.dash-fill.apt {
+    background: linear-gradient(90deg, #4f46e5, #6366f1);
+}
+
+.dash-fill.dsa {
+    background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+/* Recommend */
+.recommend-box {
+    margin-top: 16px;
+    border-radius: 18px;
+    padding: 14px;
+    background: linear-gradient(135deg, #dcfce7, #ffffff);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.recommend-box h4 {
+    margin-bottom: 6px;
+}
+
+/* Weekly chart */
+.week-chart {
+    display: flex;
+    gap: 10px;
+    height: 100px;
+    align-items: flex-end;
+}
+
+.week-bar {
+    flex: 1;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #6366f1, #4f46e5);
+    opacity: 0.85;
+    transition: transform 0.25s ease;
+}
+
+.week-bar:hover {
+    transform: translateY(-6px);
+}
+
+/* Badges */
+.dash-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.badge-pill {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(79, 70, 229, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+/* Attempts */
+.dash-activity {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.attempt-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.attempt-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.attempt-dot.good {
+    background: #22c55e;
+}
+
+.attempt-dot.bad {
+    background: #ef4444;
+}
+
+.attempt-info b {
+    font-size: 13px;
+}
+
+.attempt-info span {
+    display: block;
+    font-size: 12px;
+    color: #666;
+}
+
+/* Certificate Journey */
+.journey-box {
+    background: #f9fafb;
+    padding: 14px;
+    border-radius: 18px;
+}
+
+.journey-progress {
+    width: 100%;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.journey-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #f59e0b, #ea580c);
+    transition: width 0.5s ease;
+}
+
+.journey-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+/* Animations */
+@keyframes glowSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.week-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 6px;
+}
+
+.week-label {
+    font-size: 10px;
+    color: #666;
+}
+
+
+
